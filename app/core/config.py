@@ -14,7 +14,14 @@ class Settings(BaseSettings):
     port: int = 8080
 
     model_config = SettingsConfigDict(
-        env_file=".env.local" if os.path.exists(".env.local") else ".env"
+        env_file=".env.local"
+        if os.path.exists(".env.local")
+        else ".env"
+        if os.path.exists(".env")
+        else None,
+        env_file_encoding="utf-8",
+        case_sensitive=False,
+        extra="ignore",
     )
 
 
