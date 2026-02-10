@@ -46,7 +46,7 @@ Component metadata:
 Provide clear, technical, and accurate answers in Korean based on this metadata. If the metadata doesn't contain enough information to answer the question, acknowledge this limitation in Korean."""
 
         response = await self.client.chat.completions.create(
-            model="gpt-3.5-turbo",
+            model="gpt-4o-mini",
             messages=[
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_question},
