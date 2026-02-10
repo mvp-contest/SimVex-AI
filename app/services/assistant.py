@@ -43,7 +43,7 @@ You are currently analyzing the component: {node_name}
 Component metadata:
 {node_data}
 
-Provide clear, technical, and accurate answers based on this metadata. If the metadata doesn't contain enough information to answer the question, acknowledge this limitation."""
+Provide clear, technical, and accurate answers in Korean based on this metadata. If the metadata doesn't contain enough information to answer the question, acknowledge this limitation in Korean."""
 
         response = await self.client.chat.completions.create(
             model="gpt-4o-mini",
